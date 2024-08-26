@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Relatório de Vendas</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título do Anúncio</th>
+            <th>Quantidade Vendida</th>
+            <th>Valor Total (R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in relatorio %}
+        <tr>
+            <td>{{ item.titulo }}</td>
+            <td>{{ item.quantidade_vendida }}</td>
+            <td>R$ {{ item.valor_total }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
